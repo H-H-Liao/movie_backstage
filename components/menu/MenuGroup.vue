@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
     .group{
-        margin:24px;
+        margin:18px;
         margin-left: 0px;
         margin-right: 0px;
     }
@@ -52,12 +52,12 @@ export default {
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
-        padding-left: 24px;
+        padding-left: 18px;
 
     }
     .group_title{
         display: flex;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
     }
     .item{

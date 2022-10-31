@@ -41,15 +41,15 @@ export default {
     }
     .menu_box{
         display: flex;
-        padding:  16px 48px;
-        padding-left: 56px;
+        padding:  8px 12px;
+        padding-left: 48px;
         width: 100%;
     }
     .menu:hover{
         background-color: #6E6D80;
     }
     .item{
-        font-size: 28px;
+        font-size: 20px;
         flex: 0 90%;
     }
     .menu_button{

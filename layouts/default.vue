@@ -1,11 +1,15 @@
 <template>
   <div>
     <div class="side not-print">
-    <div class="logo">
-        後台
-    </div>
-      <menu-group title="帳號管理" icon="mdi-shopping">
-          <menu-item-extend url="member/"  title="會員管理"></menu-item-extend>
+      <menu-group title="電商管理" icon="mdi-shopping">
+        <menu-item-extend url="order"  title="訂單管理"></menu-item-extend>
+        <menu-item-extend url="stock"  title="庫存管理"></menu-item-extend>
+        <menu-item-extend url="product"  title="商品管理"></menu-item-extend>
+        <menu-item-extend url="member"  title="會員管理"></menu-item-extend>
+      </menu-group>
+      <menu-group title="設定" icon="mdi-shopping">
+        <menu-item-extend url="payment"  title="付款方式"></menu-item-extend>
+        <menu-item-extend url="shipment"  title="貨運方式"></menu-item-extend>
       </menu-group>
     </div>
     <div class="content">
@@ -22,7 +26,7 @@ export default {
   components: {
         MenuItemExtend,
         MenuGroup
-   },
+  },
 
 }
 </script>
@@ -36,21 +40,11 @@ export default {
     font-family: 'Noto Sans TC', sans-serif !important;
   }
 
-  .logo{
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    margin-top: 12px;
-    margin-bottom: 24px;
-    color:#FFDE70;
-  }
-
-
   .side{
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 240px;
     height: 100vh;
     overflow-y: auto;
     background-color: #444354;
@@ -59,8 +53,8 @@ export default {
   .content{
     position: fixed;
     top: 0px;
-    left: 300px;
-    width: calc(100vw - 300px);
+    left: 240px;
+    width: calc(100vw - 240px);
     height: calc(100vh);
     overflow-y: auto;
     /* background-color: rgb(248, 248, 248); */

@@ -127,6 +127,8 @@
 
 <script>
 import axios from 'axios'
+import Dialog from '/components/Dialog'
+// import AddMemberView from '/components/AddMemberView'
 import {
         getBirthday,
         transformBirthday2TraditionBirthday,
@@ -138,7 +140,7 @@ import {
 export default {
     components:{
         Dialog,
-        AddMemberView
+        // AddMemberView
     },
     data() {
         return {
