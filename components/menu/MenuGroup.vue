@@ -34,7 +34,7 @@ export default {
   },
   data:function(){
       return {
-          open: false
+          open: true
       }
   },
   mounted:function(){

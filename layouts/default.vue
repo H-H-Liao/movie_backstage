@@ -12,8 +12,14 @@
         <menu-item-extend url="shipment"  title="貨運方式"></menu-item-extend>
       </menu-group>
     </div>
+    <div class="header">
+
+    </div>
     <div class="content">
       <Nuxt></Nuxt>
+    </div>
+    <div class="chart">
+
     </div>
   </div>
 </template>
