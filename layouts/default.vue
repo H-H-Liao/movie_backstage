@@ -1,17 +1,55 @@
 <template>
   <div>
-    <div class="side not-print">
-      <menu-group title="電商管理" icon="mdi-shopping">
-        <menu-item-extend url="order"  title="訂單管理"></menu-item-extend>
-        <menu-item-extend url="stock"  title="庫存管理"></menu-item-extend>
-        <menu-item-extend url="product"  title="商品管理"></menu-item-extend>
-        <menu-item-extend url="member"  title="會員管理"></menu-item-extend>
-      </menu-group>
-      <menu-group title="設定" icon="mdi-shopping">
-        <menu-item-extend url="payment"  title="付款方式"></menu-item-extend>
-        <menu-item-extend url="shipment"  title="貨運方式"></menu-item-extend>
-      </menu-group>
-    </div>
+    <el-menu
+      default-active="2"
+      class="el-menu-vertical-demo side"
+      @open="handleOpen"
+      @close="handleClose"
+      background-color="#363d4d"
+      text-color="#fff"
+      active-text-color="#ffd04b">
+      <el-menu-item index="0">
+        <i class="el-icon-odometer"></i>
+        <span slot="title">儀表板</span>
+      </el-menu-item>
+      <el-submenu index="1">
+        <template slot="title">
+          <i class="el-icon-goods"></i>
+          <span>電商管理</span>
+        </template>
+        <el-menu-item-group title="訂單與商品">
+          <el-menu-item index="1-1">
+            <router-link to="order">訂單管理</router-link>
+          </el-menu-item>
+          <el-menu-item index="1-2">
+            <router-link to="stock">庫存管理</router-link>
+            </el-menu-item>
+          <el-menu-item index="1-3">
+            <router-link to="product">商品管理</router-link>
+            </el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group title="行銷">
+          <el-menu-item index="2-1" disabled="true">促銷活動管理</el-menu-item>
+          <el-menu-item index="2-2">
+            <router-link to="member">會員管理</router-link>
+          </el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group title="設定">
+          <el-menu-item index="3-1">
+            <router-link to="payment">付款方式</router-link>
+          </el-menu-item>
+          <el-menu-item index="3-2">
+            <router-link to="shipment">貨運方式</router-link>
+          </el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-menu-item index="2">
+        <i class="el-icon-chat-round"></i>
+        <span slot="title">
+          <router-link to="serviceroom">客服聊天室</router-link>
+        </span>
+      </el-menu-item>
+    </el-menu>
     <div class="header">
 
     </div>
@@ -43,6 +81,10 @@ export default {
     margin: 0px;
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
   }
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
 
   .header{
     position: fixed;
@@ -61,8 +103,6 @@ export default {
     width: 240px;
     height: 100vh;
     overflow-y: auto;
-    background-color: rgb(54,61,77);
-    color:rgb(241,242,243);
   }
   .content{
     position: fixed;
@@ -76,7 +116,7 @@ export default {
   }
   @media (max-width:1024px) {
     .side{
-       width: 0px;
+      width: 0px;
     }
     .header{
       left: 0px;
