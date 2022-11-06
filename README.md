@@ -1,6 +1,6 @@
 # 電影後台
 
-展示網址: https://movie-backstage-5gtzde7vuq-de.a.run.app/
+展示網址: https://movie-backstage.ultraboa.com/
 (部署於GCP Cloud Run)
 
 ## 使用技術
