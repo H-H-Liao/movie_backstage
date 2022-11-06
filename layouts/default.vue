@@ -56,9 +56,6 @@
     <div class="content">
       <Nuxt></Nuxt>
     </div>
-    <div class="chart">
-
-    </div>
   </div>
 </template>
 
@@ -137,15 +134,6 @@ export default {
     margin:18px;
     padding:24px 12px;
     background-color: white;
-  }
-  .chart{
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    border-radius: 100%;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(54,61,77);
   }
   .flex_cc{
     display: flex;
