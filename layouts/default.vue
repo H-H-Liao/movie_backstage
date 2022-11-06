@@ -3,8 +3,6 @@
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo side"
-      @open="handleOpen"
-      @close="handleClose"
       background-color="#363d4d"
       text-color="#fff"
       active-text-color="#ffd04b">
@@ -29,7 +27,7 @@
             </el-menu-item>
         </el-menu-item-group>
         <el-menu-item-group title="行銷">
-          <el-menu-item index="2-1" disabled="true">促銷活動管理</el-menu-item>
+          <el-menu-item index="2-1" :disabled="true">促銷活動管理</el-menu-item>
           <el-menu-item index="2-2">
             <router-link to="member">會員管理</router-link>
           </el-menu-item>
@@ -60,19 +58,10 @@
 </template>
 
 <script>
-import MenuItemExtend from '/components/menu/MenuItemExtend.vue'
-import MenuGroup from '/components/menu/MenuGroup.vue';
-
 export default {
-  components: {
-        MenuItemExtend,
-        MenuGroup
-  },
 
 }
 </script>
-
-
 <style >
   body{
     margin: 0px;
@@ -86,8 +75,8 @@ export default {
   .header{
     position: fixed;
     top: 0px;
-    left: 240px;
-    width: calc(100% - 240px);
+    left: 180px;
+    width: calc(100% - 180px);
     background-color: white;
     height: 50px;
     box-shadow: -1px -3px 8px rgba(0, 0, 0, 0.3);
@@ -97,15 +86,15 @@ export default {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 240px;
+    width: 180px;
     height: 100vh;
     overflow-y: auto;
   }
   .content{
     position: fixed;
     top: 50px;
-    left: 240px;
-    width: calc(100% - 240px);
+    left: 180px;
+    width: calc(100% - 180px);
     height: calc(100vh - 50px);
     overflow-y: auto;
     background-color: rgb(248, 248, 248);

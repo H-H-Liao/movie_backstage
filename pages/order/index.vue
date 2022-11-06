@@ -20,7 +20,7 @@
           label="搜尋">
           </el-input>
           <el-button small>搜尋</el-button>
-          <el-button @click="gotoCreate">手動新增訂單</el-button>
+          <el-button >手動新增訂單</el-button>
       </div>
       <el-table
               ref="multipleTableRef"
